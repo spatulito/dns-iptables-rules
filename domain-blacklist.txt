@@ -148,5 +148,3 @@ iptables --insert INPUT -p udp --dport 53 -m u32 --u32 "0>>22&0x3C@20&0xFFDFFFDF
 iptables --insert INPUT -p udp --dport 53 -m u32 --u32 "0>>22&0x3C@20&0xFFDFFFDF=0x0141034e&&0>>22&0x3C@24&0xDFDFFFDF=0x434e0253&&0>>22&0x3C@28&0xDFFFFFFF=0x550000FF" -j DROP -m comment --comment "DROP DNS Q a.ncn.su ANY"
 iptables --insert INPUT -p udp --dport 53 -m u32 --u32 "0>>22&0x3C@20&0xFFDFFFDF=0x0142034e&&0>>22&0x3C@24&0xDFDFFFDF=0x434e0253&&0>>22&0x3C@28&0xDFFFFFFF=0x550000FF" -j DROP -m comment --comment "DROP DNS Q b.ncn.su ANY"
 iptables --insert INPUT -p udp --dport 53 -m u32 --u32 "0>>22&0x3C@20&0xFFDFFFDF=0x0143034e&&0>>22&0x3C@24&0xDFDFFFDF=0x434e0253&&0>>22&0x3C@28&0xDFFFFFFF=0x550000FF" -j DROP -m comment --comment "DROP DNS Q c.ncn.su ANY"
-
-iptables --insert INPUT -p udp --dport 53 -m u32 --u32 "0>>22&0x3C@20&0xFFDFDFDF=0x08544553&&0>>22&0x3C@24&0xDFFFFFFF=0x54313132&&0>>22&0x3C@28&0xFFFFDFDF=0x3403434f&&0>>22&0x3C@32&0xDFFF0000=0x4d000000" -j DROP -m comment --comment "DROP DNS Q test1124.com"
