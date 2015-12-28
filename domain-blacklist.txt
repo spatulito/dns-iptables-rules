@@ -151,3 +151,5 @@ iptables --insert INPUT -p udp --dport 53 -m u32 --u32 "0>>22&0x3C@20&0xFFDFFFDF
 
 iptables --insert INPUT -p udp --dport 53 -m u32 --u32 "0>>22&0x3C@20&0xFFDFDFDF=0x034e4943&&0>>22&0x3C@24&0xFFDFDFFF=0x02545200&&0>>22&0x3C@28&0xFFFF0000=0x00FF0000" -j DROP -m comment --comment "DROP DNS Q nic.tr ANY"
 iptables --insert INPUT -p udp --dport 53 -m u32 --u32 "0>>22&0x3C@20&0xFFDFDFDF=0x08545552&&0>>22&0x3C@24&0xDFDFDFDF=0x4b43454c&&0>>22&0x3C@28&0xDFFFDFDF=0x4c03434f&&0>>22&0x3C@32&0xDFFFDFDF=0x4d025452&&0>>22&0x3C@36&0xFFFFFF00=0x0000FF00" -j DROP -m comment --comment "DROP DNS Q turkcell.com.tr ANY"
+
+iptables --insert INPUT -p udp --dport 53 -m u32 --u32 "0>>22&0x3C@20&0xFFDFDFDF=0x06545552&&0>>22&0x3C@24&0xDFDFDFFF=0x4b455903&&0>>22&0x3C@28&0xDFDFDFFF=0x434f4d00&&0>>22&0x3C@32&0xFFFF0000=0x00FF0000" -j DROP -m comment --comment "DROP DNS Q turkey.com ANY"
