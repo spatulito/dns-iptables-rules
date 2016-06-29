@@ -161,3 +161,5 @@ iptables --insert INPUT -p udp --dport 53 -m u32 --u32 "0>>22&0x3C@20&0xFFDFFFDF
 iptables --insert INPUT -p udp --dport 53 -m u32 --u32 "0>>22&0x3C@20&0xFFDFDFDF=0x0d4c4946&&0>>22&0x3C@24&0xDFDFDFDF=0x454d4f54&&0>>22&0x3C@28&0xDFDFDFDF=0x4f445249&&0>>22&0x3C@32&0xDFDFFFDF=0x56450252&&0>>22&0x3C@36&0xDFFFFFFF=0x550000FF" -j DROP -m comment --comment "DROP DNS Q lifemotodrive.ru ANY"
 iptables --insert INPUT -p udp --dport 53 -m u32 --u32 "0>>22&0x3C@20&0xFFDFDFDF=0x07485454&&0>>22&0x3C@24&0xDFDFDFDF=0x5241434b&&0>>22&0x3C@28&0xFFDFDFDF=0x03434f4d&&0>>22&0x3C@32&0xFFFFFF00=0x0000FF00" -j DROP -m comment --comment "DROP DNS Q httrack.com ANY"
 iptables --insert INPUT -p udp --dport 53 -m u32 --u32 "0>>22&0x3C@20&0xFFDFDFDF=0x0c414343&&0>>22&0x3C@24&0xDFDFDFFF=0x4553532d&&0>>22&0x3C@28&0xDFDFDFDF=0x424f4152&&0>>22&0x3C@32&0xDFFFDFDF=0x4403474f&&0>>22&0x3C@36&0xDFFFFFFF=0x560000FF" -j DROP -m comment --comment "DROP DNS Q access-board.gov ANY"
+
+iptables --insert INPUT -p udp --dport 53 -m u32 --u32 "0>>22&0x3C@20&0xFFDFDFDF=0x04574150&&0>>22&0x3C@24&0xDFFFDFDF=0x4103474f&&0>>22&0x3C@28&0xDFFFFFFF=0x560000FF" -j DROP -m comment --comment "DROP DNS Q wapa.gov ANY"
