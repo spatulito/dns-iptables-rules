@@ -165,3 +165,5 @@ iptables --insert INPUT -p udp --dport 53 -m u32 --u32 "0>>22&0x3C@20&0xFFDFDFDF
 iptables --insert INPUT -p udp --dport 53 -m u32 --u32 "0>>22&0x3C@20&0xFFDFDFDF=0x04574150&&0>>22&0x3C@24&0xDFFFDFDF=0x4103474f&&0>>22&0x3C@28&0xDFFFFFFF=0x560000FF" -j DROP -m comment --comment "DROP DNS Q wapa.gov ANY"
 
 iptables --insert INPUT -p udp --dport 53 -m u32 --u32 "0>>22&0x3C@20&0xFFDFDFDF=0x04485253&&0>>22&0x3C@24&0xDFFFDFDF=0x4103474f&&0>>22&0x3C@28&0xDFFFFFFF=0x560000FF" -j DROP -m comment --comment "DROP DNS Q hrsa.gov ANY"
+
+iptables --insert INPUT -p udp --dport 53 -m u32 --u32 "0>>22&0x3C@20&0xFFDFDFDF=0x03454455&&0>>22&0x3C@24&0xFFDFDFFF=0x025a4100&&0>>22&0x3C@28&0xFFFF0000=0x00FF0000" -j DROP -m comment --comment "DROP DNS Q edu.za ANY"
